@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Trader — Sinais OTC</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .logo span { color: #cc0000; }
+  .tagline {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .card p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+  }
+  .btn:active { opacity: 0.8; }
+  .btn-primary { background: #cc0000; color: #fff; }
+  .btn-secondary { background: #1a1a1a; color: #fff; border: 1px solid #333; margin-top: 10px; }
+  .divider {
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    margin: 8px 0;
+  }
+  .footer {
+    color: #333;
+    font-size: 11px;
+    margin-top: 32px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo"><span>MAX</span> TRADER</div>
+<div class="tagline">Sinais OTC · Pocket Option · M1</div>
+
+<div class="card">
+  <h2>📊 Bot de Análise OTC</h2>
+  <p>Subscreve os sinais OTC em tempo real. Ver planos e preços.</p>
+  <a class="btn btn-primary" id="btn-bot" href="#">Abrir no Telegram</a>
+  <div class="divider">ou</div>
+  <a class="btn btn-secondary" href="https://web.telegram.org/k/#@maxtradersinaisotcbot" target="_blank">Abrir no navegador</a>
+</div>
+
+<div class="card">
+  <h2>📈 Sala de Resultados</h2>
+  <p>Grupo gratuito com resultados diários e análises ao vivo.</p>
+  <a class="btn btn-primary" id="btn-grupo" href="#">Entrar Grátis</a>
+  <div class="divider">ou</div>
+  <a class="btn btn-secondary" href="https://web.telegram.org/k/#-1001234567890" target="_blank" id="btn-grupo-web">Abrir no navegador</a>
+</div>
+
+<div class="footer">© 2026 Max Trader · max.trader.otc@gmail.com</div>
+
+<script>
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  var isAndroid = /Android/.test(navigator.userAgent);
+
+  var botDeepLink = isIOS || isAndroid
+    ? 'tg://resolve?domain=maxtradersinaisotcbot'
+    : 'https://t.me/maxtradersinaisotcbot?start=start';
+
+  var grupoDeepLink = isIOS || isAndroid
+    ? 'tg://join?invite=JkCxhjh5T1A5ZmVk'
+    : 'https://t.me/+JkCxhjh5T1A5ZmVk';
+
+  document.getElementById('btn-bot').href = botDeepLink;
+  document.getElementById('btn-grupo').href = grupoDeepLink;
+  document.getElementById('btn-grupo-web').href = 'https://web.telegram.org/k/' + grupoDeepLink;
+</script>
+
+</body>
+</html>
