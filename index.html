@@ -112,13 +112,8 @@
   var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   var isAndroid = /Android/.test(navigator.userAgent);
 
-  var botDeepLink = isIOS || isAndroid
-    ? 'tg://resolve?domain=maxtradersinaisotcbot'
-    : 'https://t.me/maxtradersinaisotcbot?start=start';
-
-  var grupoDeepLink = isIOS || isAndroid
-    ? 'tg://join?invite=JkCxhjh5T1A5ZmVk'
-    : 'https://t.me/+JkCxhjh5T1A5ZmVk';
+  var botDeepLink = 'https://t.me/maxtradersinaisotcbot?start=start';
+var grupoDeepLink = 'https://t.me/+JkCxhjh5T1A5ZmVk';
 
   document.getElementById('btn-bot').href = botDeepLink;
   document.getElementById('btn-grupo').href = grupoDeepLink;
